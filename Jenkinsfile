@@ -37,18 +37,11 @@ spec:
                     dockerLogin()
                     
                     sh 'echo build_image'
-                    sh "docker image build -t ${DOCKER_IMAGE} ."
+                    sh "docker image build -t moglimcgrath/cloudbees ."
                     sh 'docker images'
                     sh 'docker version'                    
                  
                    // sh "docker run -p 8032:90 ${DOCKER_IMAGE}"
-                }
-            }
-        }
-        stage('test') {
-            steps {
-                container('docker') {
-                    sh "docker build -t moglimcgrath/cloudbees ."
                 }
             }
         }
