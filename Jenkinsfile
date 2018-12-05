@@ -1,4 +1,4 @@
-@_Library('shared-lib-cloudbees') _
+@Library('shared-lib-cloudbees') _
 
 
 pipeline {
